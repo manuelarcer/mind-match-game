@@ -1,0 +1,63 @@
+// game_content.js
+
+const TOPICS = {
+  concepts: [
+    ["Hot", "Cold"],
+    ["Soft", "Hard"],
+    ["Normal", "Weird"],
+    ["Tame", "Wild"],
+    ["Trashy", "Classy"],
+    ["Cheap", "Expensive"],
+    ["Overrated", "Underrated"],
+    ["Guilty Pleasure", "Openly Love"],
+    ["Scary", "Funny"],
+    ["Useless", "Essential"],
+    ["Sexy", "Unsexy"],
+    ["Smart", "Stupid"],
+    ["Forgivable", "Unforgivable"],
+    ["Harmless", "Dangerous"],
+    ["Good Idea", "Bad Idea"],
+    ["Public", "Private"],
+    ["Temporary", "Permanent"],
+    ["Local", "Global"],
+    ["Doughnut", "Bagel"],
+    ["Star Wars", "Star Trek"],
+    ["Hero", "Villain"],
+    ["Book", "Movie"],
+    ["Wet", "Dry"],
+    ["Rough", "Smooth"],
+    ["Subjective", "Objective"],
+    ["Short term", "Long term"],
+    ["Conservative", "Liberal"],
+    ["Fact", "Fiction"],
+    ["Art", "Commerce"],
+    ["Work", "Play"]
+  ],
+  statements: [
+    "Pineapple belongs on pizza.",
+    "The Bachelor is a morning person.",
+    "The Bachelor would survive a zombie apocalypse.",
+    "The Bachelor has terrible taste in music.",
+    "Social media is a net positive for society.",
+    "Cats are better than dogs.",
+    "This bachelor party is going to be legendary.",
+    "Money can buy happiness.",
+    "The Bachelor is the best driver in this room.",
+    "The Bachelor spends too much time on their phone.",
+    "Strip clubs are a wholesome family activity.",
+    "Cheating is strictly defined as physical contact.",
+    "The Bachelor is definitely the reacher in the relationship.",
+    "The Bachelor will cry during the wedding ceremony.",
+    "Exes can successfully remain platonic friends.",
+    "It is acceptable to pee in the shower.",
+    "Ghosting is a valid way to end a relationship.",
+    "The Bachelor would sell out their friends for $1 million.",
+    "Aliens have definitely visited Earth.",
+    "The Bachelor has the worst fashion sense here.",
+    "Marriage is an outdated institution.",
+    "One night stands are better than long term relationships.",
+    "The Bachelor is most likely to end up in jail tonight."
+  ]
+};
+
+module.exports = TOPICS;

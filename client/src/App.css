@@ -1,0 +1,268 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* LOBBY STYLES */
+.lobby-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.team-selection button {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.create-team {
+    margin-top: 2rem;
+    border-top: 1px solid #ccc;
+    padding-top: 1rem;
+}
+
+/* HOST LOBBY */
+.host-lobby {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.teams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.team-card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* MAIN BOARD */
+.main-board {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.board-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #333;
+    padding-bottom: 1rem;
+}
+
+.scores {
+    display: flex;
+    gap: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.game-area {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.board-prompt {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.concept {
+    display: inline-block;
+    width: 40%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.spectrum-line {
+    display: inline-block;
+    width: 20%;
+    height: 4px;
+    background-color: #333;
+    vertical-align: middle;
+}
+
+/* SPECTRUM */
+.spectrum-wrapper {
+    width: 80%;
+    margin: 2rem auto 5rem; /* Bottom margin for markers */
+    position: relative;
+}
+
+.spectrum-bar-container {
+    position: relative;
+    width: 100%;
+    height: 100px;
+}
+
+.spectrum-bar {
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden; /* Only clip the zones */
+    border: 2px solid #ccc;
+}
+
+.target-zone {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    opacity: 0.6;
+}
+
+.zone-2 { background-color: #ffcccc; } /* Light Red (2 pts) */
+.zone-3 { background-color: #ff9999; } /* Medium Red (3 pts) */
+.zone-4 { background-color: #ff0000; } /* Strong Red (4 pts) */
+
+.marker {
+    position: absolute;
+    top: -20px; /* Extends above */
+    width: 4px;
+    height: 140px; /* Extends through */
+    background-color: black;
+    transform: translateX(-50%); /* Center on position */
+    z-index: 10;
+    pointer-events: none;
+}
+
+.marker-label {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 2px 5px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.bachelor-marker {
+    background-color: blue;
+    height: 160px;
+    top: -30px;
+    width: 6px;
+    z-index: 20;
+}
+
+.bachelor-marker .marker-label {
+    background-color: blue;
+    color: white;
+    border-color: blue;
+}
+
+.team-marker {
+    background-color: green;
+}
+
+.marker-score {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    color: green;
+    background: white;
+    padding: 2px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+/* SLIDER */
+.slider-container {
+    margin: 2rem 0;
+}
+
+.game-slider {
+    width: 80%;
+    max-width: 400px;
+}
+
+.current-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+/* WAITING & REVEAL VIEW */
+.waiting-view, .reveal-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    margin-top: 2rem;
+}
+
+.waiting-view h2, .reveal-view h2 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.reveal-view p {
+    font-size: 1.2rem;
+    color: #555;
+}
